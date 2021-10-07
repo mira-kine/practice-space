@@ -1,8 +1,16 @@
-// import functions and grab DOM elements
+let people = [
+  {name: 'joey'},
+  {name: 'danielle'},
+  {name:'hugo'}
+]
 
-// initialize global state
-
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const peopleList = document.getElementById('people-list');
+// const peopleHeader = document.getElementById('h2');
+// peopleHeader.textContent = 'People';
+// peopleList.appendChild(peopleHeader);
+// // appendChild puts peopleHeader INSIDE peopleList 
+for(let person of people){
+  const peopleHeader = document.createElement('h2');
+  peopleHeader.textContent = person.name;
+  peopleList.appendChild(peopleHeader);
+}
